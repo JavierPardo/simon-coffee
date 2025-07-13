@@ -23,11 +23,35 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simon Coffee</title>
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <style>
+          {`body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5E6CC; /* Color crema de fondo */
+        }
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .bg-amber-900 { background-color: #7A2A02; } /* Marrón oscuro del café */
+        .bg-amber-800 { background-color: #92400E; }
+        .bg-amber-700 { background-color: #B45309; }
+        .text-amber-900 { color: #7A2A02; }
+        .text-amber-800 { color: #92400E; }
+        .text-amber-200 { color: #FDE68A; }
+        .bg-cream { background-color: #F5E6CC; } /* Color crema */
+        .text-green-700 { color: #15803d; } /* Para precios */`}
+        </style>
       </body>
     </html>
   );
